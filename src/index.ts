@@ -1,3 +1,4 @@
+import { stopProp } from "./utils/_utils";
 import "./styles/main";
 const appEl = document.getElementById("app");
 // console.log(appEl?.innerHTML + v1());
@@ -22,6 +23,9 @@ export function hoverToggle(element: HTMLElement, force?: boolean): void {
     newState ? "true" : "false"
   );
 }
+document
+  .querySelectorAll("div.dropdown-wrapper")
+  .forEach((x) => x.addEventListener("click", (e) => stopProp(e)));
 document.querySelectorAll("li.dual-heading").forEach((x) => {
   x.addEventListener("click", () => hoverToggle(x as HTMLElement));
   x.addEventListener("mouseover", () => hoverToggle(x as HTMLElement, true));
