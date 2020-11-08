@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <p style="display: block;">
+      Button has aria-haspopup="menu", aria-controls referencing div with
+      role="menu"
+    </p>
+    <ul class="bulletList">
+      <li>NVDA</li>
+      <li>JAWS</li>
+    </ul>
+    <div class="drop-container">
+      <ul>
+        <li class="dual-heading">
+          <button
+            class="btn-kb sr-only"
+            aria-expanded="true"
+            aria-controls="`dropdownwrapper3`"
+            aria-haspopup="menu"
+          >
+            Haspopup equals menu, controlled element has menu role
+          </button>
+          <a href="https://google.com/" tabindex="-1" aria-hidden="true">
+            Haspopup equals menu, controlled element has menu role
+          </a>
+          <div role="menu" class="dropdown-wrapper" id="`dropdownwrapper${3}`">
+            <ul>
+              <li>
+                <a href="https://google.com/">Same link as Heading</a>
+              </li>
+              <li>
+                <a href="https://google.com/">google2</a>
+              </li>
+              <li>
+                <a href="https://google.com/">google2</a>
+              </li>
+              <li>
+                <a href="https://google.com/">google3</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="app"></div>
+
+    <script src="src/index"></script>
+  </body>
+</html>

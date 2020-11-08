@@ -1,0 +1,106 @@
+$red: random(256)-1;
+$green: random(256)-1;
+$blue: random(256)-1;
+
+*:focus {
+  outline: 3px solid black;
+}
+li {
+  list-style: none;
+}
+.drop-container, .drop-container > ul {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  /* justify-content: center; */
+  align-content: start;
+}
+div.drop-container > ul {
+  align-items: flex-start;
+  display: inline-flex;
+}
+li.dual-heading {
+  width: min-content;
+  box-sizing: content-box;
+  display: inline-block;
+  flex: min-content;
+  list-style-type: none;
+  margin: 0;
+  position: static;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  outline: 1px purple solid;
+}
+
+
+.dropdown-wrapper {
+  z-index: 3;
+  position: absolute;
+  text-align: left;
+  background-color: white;
+  outline: black 1px solid;
+  pointer-events: inherit;
+  padding: .75em;
+}
+
+li.dual-heading > .dropdown-wrapper {
+  display: none;
+
+}
+li.dual-heading.show > .dropdown-wrapper {
+  display: flex;
+}
+.hidden {
+  display: none !important;
+}
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.dual-heading > a {
+  border: 1px solid black;
+  border-radius: 3px;
+  z-index: inherit;
+  color: #1c1c4f;
+  padding: 0.25em 0.2em 0.15em;
+  font-family: Helvetica Neue, Helvetica, Arial, Roboto, sans-serif;
+  font-weight: 550;
+  font-size: medium;
+}
+button.btn-kb:focus + a {
+  outline: 3px solid black;
+}
+.spacer {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+//
+//ul.bulletList > li::before {
+//  content: url("../../images/listmarker1.svg");
+//  //background: #662974;
+//  width: 1rem;
+//  height: 1rem;
+//  border-radius: 50%;
+//  display: inline-block;
+//  //line-height: 1rem;
+//  color: white;
+//  text-align: center;
+//  margin-right: 0.5rem;
+//}
+ul.bulletList > li {
+  list-style-image: url("../../images/listmarker1.svg");
+}
