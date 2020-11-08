@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "~*": ["./*"]
+    },
     "strict": true,
     "module": "commonjs",
     "jsx": "preserve",
@@ -12,5 +16,6 @@
     ],
     "rootDir": "src",
     "moduleResolution": "node"
-  }
+  },
+  "include": ["src/**/*"]
 }
